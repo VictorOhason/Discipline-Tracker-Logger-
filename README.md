@@ -1,0 +1,1 @@
+I am Writing this code from scratch from the one I create using AI.
