@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discipline Tracker — Structure & Progress logger</title>
+    <link rel="stylesheet" href="css/style.css">  
+</head>
+<body>
+    <!--The Top bar on the website kind of explaining what the site does-->
+    <div class="app">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">Discipline Tracker</p>
+                <h1>Structure & Progress</h1>
+                <p class="description">Dashboards below for discipline, streaks, scoring, and daily execution.</p>
+            </div>
+            <!-- This Todays current date -->
+            <div class="meta">
+                <span id="today-label"></span>
+            </div>
+        </header>
+
+        <!-- The Navigation bar for Daily Log, Dashboard, History and Miscallenous-->
+        <nav>
+            <button class="tab active" data-view="log">Daily Log</button>
+            <button class="tab" data-view="dashboard">Dashboard</button>
+            <button class="tab" data-view="history">History</button>
+            <button class="tab" data-view="misc">Miscellaneous</button>
+        </nav>
+
+        <main>
+            <section id="view-log" class="panel panel--primary">
+                <div class="panel-head">
+                    <div>
+                        <p class="panel-label">Daily Check</p>
+                        <h2> Have I acted in the same way, or form like the person i want to become?</h2>
+                    </div>
+                    <button id="save-button" class="button button--accent">Save Entry</button>
+                </div>
+
+            <!--Trading Logs Section-->
+            <div class="segment">
+                <h3 class="segment-title">Trading Logs</h3>
+                <div class="grid grid-2">
+                    <label class="field">
+                        <span>P/L ($/£)</span>
+                        <input type="number" id="t-pl" placeholder="+120 or -45" step="any">
+                    </label>
+                    <label class="field field--full">
+                        <span> Rules Followed?</span>
+                        <div id="rules-row" class="toggle-group"></div>
+                        <input type="hidden" id="t-rules" value="No">
+                    </label>
+                </div>
+                <label class="field field--full">
+                    <span>Trading Notes</span>
+                    <textarea id="notes" placeholder="What happened?, What did you learn?"></textarea>
+                </label>
+            </div>
+
+            <!-- Programming Logs Section-->
+             <div class="segment">
+                <h3 class="segment-title">Programming Logs</h3>
+                <div class="grid grid-2">
+                    <label class="field">
+                        <span>Hours</span>
+                        <input type="number" id="p-hours" placeholder="how long did you study for? eg. 2.5 for 2hrs 30mins" step="any" min="0">
+                    </label>
+                    <label class="field">
+                        <span> Topic / Project</span>
+                        <input type="text" id="p-topic" placeholder="e.g React, Node.js, Tkinter">
+                    </label>
+                </div>
+             </div>
+
+             <!--Discipline Logs Section-->
+             <div class="segment">
+                <h3 class="segment-title">Discipline Logs</h3>
+                <div class="grid grid-2">
+                    <label class="field">
+                        <span>Waking Time</span>
+                        <input type="time" id="d-wake">
+                    </label>
+                    <label class="field">
+                        <span>Focus Score</span>
+                        <div id="focus-row" class="score-group"></div>
+                        <input type="hidden" id="d-focus" value="0">
+                    </label>
+                </div>
+             </div>
+
+             <!-- Spiritual Growth Logs-->
+              <div class="segment">
+                <h3 class="segment-title">Spiritual</h3>
+                <div class="grid grid-2">
+                    <label class="field">
+                        <span>Prayer & Reflection?</span>
+                        <div id="prayer-row" class="toggle-group"></div>
+                        <input type="hidden" id="s-prayer" value="No">
+                    </label>
+                        <label class="field">
+                        <span>Reflection</span>
+                        <input type="text" id="s-reflect" placeholder="Just 1 liner...">
+                    </label>
+                </div>
+              </div>
+
+            <!-- Story Writing -->
+             <div class="segment">
+                <h3 class="segment-title">Writing</h3>
+                <div class="grid grid-2">
+                    <label class="field">
+                        <span>Word Count</span>
+                        <input type="number" id="w-count" placeholder="How many words did you write today?" min="0">
+                    </label>
+                    <label class="field">
+                        <span>What did you write?</span>
+                        <input type="text" id="w-topic" placeholder="journal, story-cont etc.">
+                    </label>
+                </div>
+             </div>
+            
+            <!-- Custom Sections Container-->
+             <div id="custom-sections-container"></div>
+            </section>
+        </main>
+
+    </div>
+</body>
+</html>
