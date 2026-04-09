@@ -22,7 +22,7 @@
         </header>
 
         <!-- The Navigation bar for Daily Log, Dashboard, History and Miscallenous-->
-        <nav>
+        <nav class="tabbar">
             <button class="tab active" data-view="log">Daily Log</button>
             <button class="tab" data-view="dashboard">Dashboard</button>
             <button class="tab" data-view="history">History</button>
@@ -147,6 +147,7 @@
             </div>
             <div class="status-card">
                 <span>Checked actions</span>
+                <strong id="action-count">0 / 5</strong>
             </div>
         </div>
         </section>
@@ -185,7 +186,7 @@
                 <div class="streak-card"><span>Programming</span><strong id="coding-streak">0</strong></div>
                 <div class="streak-card"><span>Prayer</span><strong id="prayer-streak">0</strong></div>
                 <div class="streak-card"><span>Discipline</span><strong id="discipline-streak">0</strong></div>
-                <div class="streak-card"><span>Writing</span><strong id="writing streak">0</strong></div>
+                <div class="streak-card"><span>Writing</span><strong id="writing-streak">0</strong></div>
             </div>
             
             <!--History tab-->
@@ -195,7 +196,7 @@
             </div>
         </section>
 
-        <section id="view-history" class="panel-hidden">
+        <section id="view-history" class="panel hidden">
             <div class="panel-head">
                 <div>
                     <p class="panel-label">History</p>
@@ -204,8 +205,21 @@
             </div>
             <div id="history-list-full" class="history-list"></div>
         </section>
-        </main>
 
+        <section id="view-misc" class="panel hidden">
+            <div class="panel-head">
+                <p class="panel-label">Notes</p>
+                <h2>Make notes about the day</h2>
+            </div>
+            <div>
+                <textarea id="misc-notes" placeholder="What happened? What did you learn today?"></textarea>
+                <label class="field">
+                    <span>Date</span>
+                    <input type="date" id="misc-date">
+                </label>
+             </div>
+        </section>
+        </main>
     </div>
     <script src="js/script.js"></script>
 </body>
