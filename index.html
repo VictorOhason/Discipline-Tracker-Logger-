@@ -123,9 +123,90 @@
             
             <!-- Custom Sections Container-->
              <div id="custom-sections-container"></div>
-            </section>
+
+             <!--Personal Execution-->
+             <div class="segment">
+                <h3 class="segment-title"> Personal Execution</h3>
+                <div class="grid grid-2">
+                <label class="field">
+                    <span>Date</span>
+                    <input type="date" id="entry-date">
+                </label>
+                    <label class="field field--full">
+                    <span>Personal execution</span>
+                    <div id="self-row" class="toggle-group"></div>
+              <input type="hidden" id="self-check" value="No">
+            </label>
+          </div>
+        </div>
+
+        <div class="status-row">
+            <div class="status-card">
+                <span>Today Score</span>
+                <strong id="score-display">0 / 100</strong>
+            </div>
+            <div class="status-card">
+                <span>Checked actions</span>
+            </div>
+        </div>
+        </section>
+
+        <!--Dashboard section/tab-->
+        <section id="view-dashboard" class="panel panel--secondary hidden">
+            <div class="panel-head">
+                <div>
+                    <p class="panel-label">Weekly progress</p>
+                    <h2>Discipline Dashboard</h2>
+                </div>
+                <button id="clear-button" class="button button--ghost">Clear all logs</button>
+            </div>
+
+            <div class="grid grid-4 stats-grid">
+                <div class="stat-card">
+                    <span>Average Score</span>
+                    <strong id="avg-score">0</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Days Logged</span>
+                    <strong id="total-days">0</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Trend</span>
+                    <strong id="trend">Stable</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Completion rate</span>
+                    <strong id="completion-rate">0%</strong>
+                </div>
+            </div>
+
+            <div class="grid grid-4 streak-grid">
+                <div class="streak-card"><span>Programming</span><strong id="coding-streak">0</strong></div>
+                <div class="streak-card"><span>Prayer</span><strong id="prayer-streak">0</strong></div>
+                <div class="streak-card"><span>Discipline</span><strong id="discipline-streak">0</strong></div>
+                <div class="streak-card"><span>Writing</span><strong id="writing streak">0</strong></div>
+            </div>
+            
+            <!--History tab-->
+            <div class="logs-panel">
+                <h3>Recent entries</h3>
+                <div id="history-list" class="history-list"></div>
+            </div>
+        </section>
+
+        <section id="view-history" class="panel-hidden">
+            <div class="panel-head">
+                <div>
+                    <p class="panel-label">History</p>
+                    <h2>All saved days</h2>
+                </div>
+            </div>
+            <div id="history-list-full" class="history-list"></div>
+        </section>
         </main>
 
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
