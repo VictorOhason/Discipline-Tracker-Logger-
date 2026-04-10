@@ -18,7 +18,22 @@ body{
     margin: 0 auto;
     padding: 24px;
 }
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    background: var(--surface);
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.meta{
+    border-radius: 999px;
+    padding: 12px 24px;
+    background: var(--bg);
+    color:var(--text);
+}
 /*body — background, font, margin reset
 .app — max width, centering
 .topbar — your header
