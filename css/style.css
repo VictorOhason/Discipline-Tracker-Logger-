@@ -4,13 +4,14 @@
     --text: #f0f0f0;/*near white for good contrast*/
     --muted: #888888;        /*Dimmer text for labels*/
     --accent: #ff4b33; /*Orange Red*/
+    --font: Inter, sans-serif; /*Claudes Font style*/
 }
 
 body{
     background: var(--bg);
     color: var(--text);
     margin: 0;
-    font-family: Inter, sans-serif;
+    font-family: var(--font);
 }
 .app{
     max-width: 1200px;
