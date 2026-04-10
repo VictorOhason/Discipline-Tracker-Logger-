@@ -1,0 +1,7 @@
+:root{
+    --bg: #1a1a1a;/*Dark Background*/
+    --surface:#252525;     /*Lighter Darker for cards*/
+    --text: #f0f0f0;/*near white for good contrast*/
+    --muted: #888888;        /*Dimmer text for labels*/
+    --accent: #ff4b33; /*Orange Red*/
+}
