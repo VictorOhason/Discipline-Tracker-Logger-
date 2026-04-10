@@ -5,3 +5,23 @@
     --muted: #888888;        /*Dimmer text for labels*/
     --accent: #ff4b33; /*Orange Red*/
 }
+
+body{
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+.app{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/*body — background, font, margin reset
+.app — max width, centering
+.topbar — your header
+.tabbar — navigation
+.panel — section containers
+.segment — individual cards inside panels
+Small elements last — buttons, inputs, labels*/
