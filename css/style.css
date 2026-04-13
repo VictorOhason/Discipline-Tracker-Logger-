@@ -118,6 +118,11 @@ body{
     height: 100%;
 }
 
+input{
+    display: flex;
+    margin: 10px 0px 15px 0px;
+    
+}
 
 /*
 body — background, font, margin reset
