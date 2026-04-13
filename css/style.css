@@ -48,6 +48,7 @@ body{
     padding: 12px 20px;
     border-radius: 12px;
     background: var(--surface);
+    text-decoration: none;
     color: var(--muted);
     cursor: pointer;
     z-index: 1;
@@ -72,7 +73,7 @@ body{
     height: 100%;
 }
 
-/*Panel Code*/
+
 .panel{
     max-width: 967px;
     background-color: var(--surface);
@@ -82,12 +83,19 @@ body{
 }
 
 
+.segment{
+    margin: 10px 0px 15px 0px;
+    background-color: var(--surface);
+    border-left: 6px solid var(--accent);
+    padding: 15px;
+}
+
 
 /*body — background, font, margin reset
 .app — max width, centering
 .topbar — your header
 .tabbar — navigation
 
-.panel — section containers #Up to here#
-.segment — individual cards inside panels
+.panel — section containers 
+.segment — individual cards inside panels#Up to here#
 Small elements last — buttons, inputs, labels*/
