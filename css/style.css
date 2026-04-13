@@ -71,6 +71,18 @@ body{
 .tab:hover::before{
     height: 100%;
 }
+
+/*Panel Code*/
+.panel{
+    max-width: 967px;
+    background-color: var(--surface);
+    border: 1px solid var(--muted);
+    margin: 17px 0px 17px 0px;
+    padding: 12px;
+}
+
+
+
 /*body — background, font, margin reset
 .app — max width, centering
 .topbar — your header
