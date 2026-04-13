@@ -91,11 +91,13 @@ body{
 }
 
 
-/*body — background, font, margin reset
+/*
+body — background, font, margin reset
 .app — max width, centering
 .topbar — your header
 .tabbar — navigation
 
 .panel — section containers 
-.segment — individual cards inside panels#Up to here#
-Small elements last — buttons, inputs, labels*/
+.segment — individual cards inside panels
+Small elements last — buttons, inputs, labels#Up to here#
+*/
