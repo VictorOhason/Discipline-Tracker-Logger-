@@ -7,7 +7,20 @@ document.addEventListener('DOMContentLoaded', function(){
         window.location.href = "login.html"
     }
     document.getElementById("save-button").addEventListener("click",saveToday);
-    
+    toggle_choice(
+        document.getElementById("rules-row"),
+        document.getElementById("t-rules")
+    )
+
+    toggle_choice(
+        document.getElementById("prayer-row"),
+        document.getElementById("s-prayer")
+    )
+
+    toggle_choice(
+        document.getElementById("self-row"),
+        document.getElementById("self-check")
+    )
 });
 
 //This function grabs and saves all input from the user into vairables and makes sure important ones arent empty.
@@ -61,4 +74,31 @@ function saveToday(){
         console.log("Saving entry:", entry)
     localStorage.setItem(date, JSON.stringify(entry))
     console.log("saved to key:", date)
+};
+
+// This functin toggles the choice for the button/input container found in;
+// t-rules
+// s-prayer
+// self-check
+function toggle_choice(button_container, update_input){
+    let button1 = document.createElement('button')
+    let button2 = document.createElement('button')
+    button1.textContent = "Yes"
+    button2.textContent = "No"
+    button_container.appendChild(button1)
+    button_container.appendChild(button2)
+
+    button1.classList.add("toggle-btn")
+    button2.classList.add("toggle-btn")
+
+    button1.addEventListener("click", function(){
+        update_input.value = "Yes"
+        button1.classList.add("active")
+        button2.classList.remove("active")
+    });
+    button2.addEventListener("click", function(){
+        update_input.value = "No"
+        button1.classList.remove("active")
+        button2.classList.add("active")
+    });
 };

@@ -90,7 +90,7 @@ body{
     padding: 15px;
 }
 
-.button{
+.button,.toggle-btn{
     padding: 12px 20px;
     border-radius: 12px;
     background: var(--surface);
@@ -101,7 +101,7 @@ body{
     overflow: hidden;
 }
 
-.button::before{
+.button::before, .toggle-btn::before{
     z-index: -1;
     content: '';
     position: absolute;
@@ -113,8 +113,14 @@ body{
     transition: height 0.3s ease;
     
 }
+.toggle-btn{
+    opacity: 0.4;
+}
+.toggle-btn.active{
+    opacity: 1;
+}
 
-.button:hover::before{
+.button:hover::before,.toggle-btn:hover::before{
     height: 100%;
 }
 
