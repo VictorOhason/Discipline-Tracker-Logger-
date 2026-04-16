@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function(){
+    let authenticated = sessionStorage.getItem("loggedIn")
+    if(authenticated != "true"){
+        alert("You were not authenitcated!, Login again!!")
+        window.location.href = "login.html"
+    }
     document.getElementById("save-button").addEventListener("click",saveToday);
     
 });
