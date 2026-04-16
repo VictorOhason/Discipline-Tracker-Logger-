@@ -1,3 +1,5 @@
+// This function waits until the page is loaded before doing anything else
+// After the page has been loaded it authenticates the user's session
 document.addEventListener('DOMContentLoaded', function(){
     let authenticated = sessionStorage.getItem("loggedIn")
     if(authenticated != "true"){
@@ -8,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function(){
     
 });
 
+//This function grabs and saves all input from the user into vairables and makes sure important ones arent empty.
+// Then it stores the user inputs as a key value pair and saves them in local storage
 function saveToday(){
     let date = document.getElementById("entry-date").value
     let pnl = document.getElementById("t-pl").value
