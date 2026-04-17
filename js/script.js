@@ -138,3 +138,28 @@ function focus_score(button_container, update_input) {
         button_container.appendChild(button);
     }
 }
+
+function score_calc(){
+    let prayer = document.getElementById("s-prayer").value
+    let focus = document.getElementById("d-focus").value
+    let self_check = document.getElementById("self-check").value
+    let wake_time = document.getElementById("d-wake").value
+    let trading_rules = document.getElementById("t-rules").value
+    let code_time = document.getElementById("p-hours").value
+    
+
+
+    let total_score = 0
+    if (prayer === "Yes")
+        total_score +=20;
+    if (self_check === "Yes")
+        total_score +=15;
+    if (wake_time != "")
+        total_score +=15;
+    if (trading_rules === "Yes")
+        total_score +=15;
+    if (code_time != "")
+        total_score +=15;
+    if (focus === "Yes")
+        total_score +=20;
+}
