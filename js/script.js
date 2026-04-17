@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded', function(){
         document.getElementById("self-row"),
         document.getElementById("self-check")
     )
+
+    focus_score(
+        document.getElementById("focus-row"),
+        document.getElementById("d-focus")
+    )
 });
 
 //This function grabs and saves all input from the user into vairables and makes sure important ones arent empty.
@@ -102,3 +107,34 @@ function toggle_choice(button_container, update_input){
         button2.classList.add("active")
     });
 };
+
+// This function does a similar actiion to the one above, but it creates 10 buttons and allows me to toggle any one
+function focus_score(button_container, update_input) {
+
+    for (let i = 1; i <= 10; i++) {
+
+        let button = document.createElement('button'); // create ONE button
+
+        button.textContent = i; // show number
+        button.classList.add("toggle-btn");
+
+        // click event for THIS button
+        button.addEventListener("click", function () {
+
+            // remove active from all buttons
+            let allButtons = button_container.querySelectorAll('button');
+            allButtons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+            // activate the clicked one
+            button.classList.add("active");
+
+            // update input value
+            update_input.value = i;
+        });
+
+        // add button to container
+        button_container.appendChild(button);
+    }
+}
